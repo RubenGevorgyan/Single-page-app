@@ -1,6 +1,7 @@
 import Countries from './Countries.js'
 
 const routing = async()=> {
+    let list = new Countries;
     let url = window.location.hash;
     let adress = url.split('/')[1];
     let body = document.getElementById("body")
@@ -16,7 +17,7 @@ const routing = async()=> {
     `
         }
         else {
-            new Countries();
+            list.for_dropdown()
         }
     }
 }
